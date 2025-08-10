@@ -1,4 +1,4 @@
-# Pathfinding Visualiser (Round 1)
+# Pathfinding Visualiser
 
 A browser-based pathfinding visualiser built with HTML5 Canvas and vanilla JavaScript.  
 **Round 1** implements **Breadth-First Search (BFS)** with animated exploration and shortest-path reconstruction.
