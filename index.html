@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Pathfinding Visualiser — Round 1 (BFS)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Pathfinding Visualiser <span class="tag">Round 1 • BFS</span></h1>
+    <div class="controls">
+      <button id="modeStart">Set Start</button>
+      <button id="modeGoal">Set Goal</button>
+      <button id="modeWall" class="active">Draw Walls</button>
+      <button id="run">Run</button>
+      <button id="reset">Reset</button>
+      <button id="clearWalls">Clear Walls</button>
+      <label class="speed">
+        Speed
+        <input id="speed" type="range" min="1" max="120" value="60" />
+        <span id="fpsLabel">60 fps</span>
+      </label>
+      <span class="hint">Tip: drag on grid to draw walls • S to set start • G to set goal • W to draw walls • R to run</span>
+    </div>
+  </header>
+
+  <main>
+    <canvas id="grid" width="1000" height="600" aria-label="Pathfinding grid"></canvas>
+  </main>
+
+  <footer>
+    <p>Round 1: BFS, orthogonal moves, animated exploration + shortest path. Round 2: Dijkstra, A*, weights, diagonals, metrics.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
