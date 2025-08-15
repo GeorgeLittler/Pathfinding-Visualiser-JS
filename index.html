@@ -2,26 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Pathfinding Visualiser — Round 1 (BFS)</title>
+  <title>Pathfinding Visualiser</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Pathfinding Visualiser <span class="tag">Round 1 • BFS</span></h1>
+    <h1>Pathfinding Visualiser</h1>
     <div class="controls">
+      <label>
+        Algorithm
+        <select id="algo">
+          <option value="bfs">BFS (Unweighted)</option>
+          <option value="dfs">DFS (Unweighted)</option>
+          <option value="dijkstra">Dijkstra (Weighted)</option>
+          <option value="astar">A* (Weighted)</option>
+        </select>
+      </label>
       <button id="modeStart">Set Start</button>
       <button id="modeGoal">Set Goal</button>
       <button id="modeWall" class="active">Draw Walls</button>
       <button id="run">Run</button>
       <button id="reset">Reset</button>
+      <button id="clearPath">Clear Path</button>
       <button id="clearWalls">Clear Walls</button>
+      <button id="randomWalls">Random Walls</button>
+      <label><input id="diagonals" type="checkbox"> Diagonals</label>
+      <label><input id="weights" type="checkbox"> Weighted cells</label>
       <label class="speed">
         Speed
         <input id="speed" type="range" min="1" max="120" value="60" />
         <span id="fpsLabel">60 fps</span>
       </label>
-      <span class="hint">Tip: drag on grid to draw walls • S to set start • G to set goal • W to draw walls • R to run</span>
+      <span class="hint">
+        Tip: drag to draw walls • S start • G goal • W walls • R run • A cycle algo • D diagonals • C clear path
+      </span>
+    </div>
+    <div class="metrics" aria-live="polite">
+      <span><strong>Algo:</strong> <span id="m_algo">BFS</span></span>
+      <span><strong>Expanded:</strong> <span id="m_expanded">0</span></span>
+      <span><strong>Path:</strong> <span id="m_path">0</span></span>
+      <span><strong>Time:</strong> <span id="m_time">0 ms</span></span>
+      <span><strong>Status:</strong> <span id="m_status">—</span></span>
     </div>
   </header>
 
@@ -30,9 +52,9 @@
   </main>
 
   <footer>
-    <p>Round 1: BFS, orthogonal moves, animated exploration + shortest path. Round 2: Dijkstra, A*, weights, diagonals, metrics.</p>
+    <p>Interactive pathfinding algorithms visualiser with BFS, DFS, Dijkstra, and A*.</p>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=2"></script>>
 </body>
 </html>

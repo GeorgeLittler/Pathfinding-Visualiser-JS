@@ -101,3 +101,18 @@ footer {
   color: var(--muted);
   font-size: 13px;
 }
+
+.metrics {
+  margin-top: 10px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 13px;
+}
+.metrics strong { color: var(--text); font-weight: 700; }
+label select {
+  background: #182231; color: var(--text); border: 1px solid #273448;
+  padding: 6px 10px; border-radius: 10px; margin-left: 6px;
+}
+.controls label { display: inline-flex; align-items: center; gap: 6px; }
