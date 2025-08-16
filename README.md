@@ -2,6 +2,8 @@
 
 **Live demo:** https://georgelittler.github.io/Pathfinding-Visualiser-JS/
 
+![Pathfinding Visualiser Screenshot](PathfindingVisualiserScreenshot.png)
+
 A browser-based pathfinding visualiser built with HTML5 Canvas and vanilla JavaScript.  
 Implements **Breadth-First Search (BFS)**, **Depth-First Search (DFS)**, **Dijkstra’s Algorithm**, and **A\*** with animated exploration and shortest-path reconstruction.
 
